@@ -1,0 +1,371 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /*font-family: 'Lato', sans-serif;*/
+}
+
+.outer-wrap {
+    flex-wrap: wrap;
+}
+.site-header {
+    height: 400px;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-flow: column;
+}
+
+.site-info {
+    display: flex;
+    flex-grow: 1;
+    flex-flow: column;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.nav ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    text-align: center;
+    flex-wrap: wrap;
+    font-size: 1.1rem;
+    background-color: yellow;
+    list-style-type: none;
+    line-height: 2rem;
+    padding: 0;
+    margin: 0;
+    
+}
+.nav ul li {
+    flex-grow: 1;
+    flex-basis: auto;
+    flex-shrink: 0;
+    padding: 0;
+}
+.nav ul li a {
+    text-decoration: none;
+    padding: .6rem 1rem;
+    color: black;
+    display: block;
+}
+
+.nav ul li a:hover {
+    background-color: black;
+    color: yellow;
+}
+
+/* all body*/
+
+@media screen and (min-width:1120px){
+    .content-area {
+        display: flex;
+    }
+    .aside-bar {
+        flex: 0 0 320px;
+    }
+}
+
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.main-content-area {
+    
+    background-color: #EEE;
+}
+
+.aside-bar {
+    background-color: blue;
+}
+
+@media screen and (min-width: 810px){
+    .nav ul {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    .nav ul li {
+        flex-grow: 1;
+        flex-basis: auto;
+        flex-shrink: 0;
+    }
+}
+@media screen and (min-width: 1120px) {
+    .site-title {
+        font-size: 4em;
+    }
+}
+
+/* start post styles */
+.main-content-area {
+    padding: 2rem;
+}
+.post {
+    background-color: white;
+    margin-bottom: 1rem;
+}
+
+.post a {
+    color: black;
+    text-decoration: none;
+}
+
+.font-content {
+    padding: 0 40px 20px;
+}
+
+.font-content h2 {
+    background-color: yellow;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    margin: 0 -40px 30px;
+}
+
+@media screen and (min-width:810px) {
+    .posts {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .post {
+        flex-basis: 49%;
+    }
+}
+
+@media screen and (min-width:1120px) {
+    .post-half {
+        flex-basis:third 49%;
+    }
+    .onethird-post {
+        flex-basis: 32%;
+    }
+    .full-post {
+        flex-basis: 100%;
+    }
+}
+
+/* Watvh today */
+
+.watch-header {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.watch-card {
+    margin: 1rem;
+}
+
+.watch-content {
+    background-color: black;
+    color: white;
+    padding: 3rem;
+}
+
+.watch-content h2 {
+    font-size: 2rem;
+    font-weight: 300;
+    margin: 0;
+    text-transform: capitalize;
+}
+
+.movie-info {
+    font-weight: bold;
+}
+
+.movie-info span {
+    padding-right: 1.5rem;
+}
+.movie-info p {
+    margin: 1rem 0;
+}
+.watch-content a {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+@media screen and (min-width:810px){
+    .watch-card {
+        display: flex;
+
+    }
+    .watch-content {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        order: 1;
+    }
+    .watch-img {
+        order: 2;
+    }
+}
+
+/* download content */
+
+.download-card {
+    margin-bottom: 1rem;
+}
+.download-content {
+    background-color: white;
+}
+.download-content a {
+    background-color: black;
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.download-content a i {
+    font-size: 2.5rem;
+}
+
+.download-info {
+    padding: 1rem 2rem;
+}
+
+.download-info h4 {
+    margin: 0;
+}
+
+.download-info p {
+    margin: 0;
+    font-size: .9em;
+}
+.download-cast img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+.download-rating {
+    background-color: yellow;
+    padding: 1rem 2rem;
+    color: black;
+    font-size: .9rem;
+}
+.download-rating .rate {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: -0.25rem;
+}
+.download-content {
+    display: flex;
+    flex-flow: column;
+}
+
+.download-content a , .download-rating{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.download-cast, .download-genre {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.download-genre {
+    margin-bottom: 10px;
+}
+
+.download-info h4 {
+    flex-basis: 20%;
+}
+
+@media screen and (min-width:810px){
+    
+    .download-content {
+        display: flex;
+        flex-flow: row;
+    }
+    .download-content a,.download-rating {flex-grow: 1;}
+    .download-info {
+        flex-grow: 2;
+    }
+}
+
+/* Gallary Images */
+
+.gallary-imgs {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -8px;
+}
+
+.gallary-img {
+    height: 250px;
+    flex-grow: 1;
+    margin: 0 0 8px 8px;
+}
+.gallary-img img {
+    height: 100%;
+    object-fit: cover;
+}
+.gallary-img:nth-child(4n+1) {
+    flex-basis: 250px;
+}
+.gallary-img:nth-child(4n+2){
+    flex-basis: 250px;
+}
+
+.gallary-img:nth-child(4n+3) {
+    flex-basis: 325px;
+}
+
+.gallary-img:nth-child(4n+4) {
+    flex-basis: 180px;
+}
+
+/* Side bar */
+
+.aside-bar {
+    padding: 2rem;
+    color: black;
+    background-color: #ededed;
+}
+
+.widget {
+    background-color: white;
+    margin-bottom: 2rem;
+}
+
+.widget-content {
+    padding: .5rem 2rem;
+}
+
+.aside-bar ul{
+    list-style: none;
+    padding-left: 1rem;
+}
+.aside-bar ul a {
+    display: block;
+    padding-bottom: .4rem;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+@media screen and (min-width:810px) and (max-width:1120px){
+    .aside-bar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .widget {
+        flex-basis: 48.8%;
+    }
+}
